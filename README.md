@@ -1,1 +1,1 @@
-Implementation and visualization of the K-means algorithm.
+Implementation and visualization of the KNN algorithm.
