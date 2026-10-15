@@ -1,4 +1,5 @@
 import matplotlib.pyplot as plt
+from functions import border
 
 def plot_scatter(df):
     for group in df['class'].unique():
@@ -30,6 +31,11 @@ def plot_k_means(df, grid):
                     marker='x',
                     color=colors[group],
                     label=group)
+
+    edge = border(grid)
+    for c in edge.keys():
+        edge[c]['x']
+        plt.plot(edge[c]['x'], edge[c]['y'], linestyle='dashed', color='black')
 
     plt.xlabel('x')
     plt.ylabel('y')

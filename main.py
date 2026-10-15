@@ -1,9 +1,11 @@
 import pandas as pd
 from graphs import *
-from functions import k_means
+from functions import knn
 
 data = pd.read_csv('data.csv', header=0)
-plot_scatter(data)
 
-grid = k_means(df=data)
-plot_k_means(data ,grid)
+grid = knn(df=data, mesh_step=50)
+
+plot_k_means(df=data, grid=grid)
+
+plt.show()
